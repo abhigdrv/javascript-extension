@@ -42,12 +42,12 @@ Import the JavaScript extension script before using any of the provided function
 // Example usage of the provided functions
 
 // Capitalize the first letter of a string
-  **const capitalizedString = "hello".capitalizeFirstLetter();**
+  __const capitalizedString = "hello".capitalizeFirstLetter();__
   console.log(capitalizedString); // Outputs: Hello
 
   // Group array elements based on a custom callback
   const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-  **const groupedByOddEven = numbers.groupBy(num => (num % 2 === 0) ? 'even' : 'odd');**
+  __const groupedByOddEven = numbers.groupBy(num => (num % 2 === 0) ? 'even' : 'odd');__
   console.log(groupedByOddEven);
   /*
   Outputs:
@@ -64,7 +64,7 @@ Import the JavaScript extension script before using any of the provided function
     { name: 'Charlie', age: 30 },
   ];
 
-  **const groupedByAge = people.groupByKey('age');**
+  __const groupedByAge = people.groupByKey('age');__
   console.log(groupedByAge);
   /*
   Outputs:
@@ -76,7 +76,7 @@ Import the JavaScript extension script before using any of the provided function
 
   // Get distinct elements from an array
   const repeatedNumbers = [1, 2, 3, 1, 4, 2, 5];
-  **const distinctNumbers = repeatedNumbers.distinct();**
+  __const distinctNumbers = repeatedNumbers.distinct();__
   console.log(distinctNumbers); // Outputs: [1, 2, 3, 4, 5]
 
   // Get unique objects based on a specific key
@@ -86,7 +86,7 @@ Import the JavaScript extension script before using any of the provided function
     { id: 1, name: 'Bob' },
   ];
 
-  **const uniqueUsersById = users.uniqueBy('id');**
+  __const uniqueUsersById = users.uniqueBy('id');__
   console.log(uniqueUsersById);
   /*
   Outputs:
@@ -98,11 +98,11 @@ Import the JavaScript extension script before using any of the provided function
 
   // Sort array based on a custom callback
   const words = ['apple', 'banana', 'grape', 'orange'];
-  **const sortedByLength = words.sortBy(word => word.length);**
+  __const sortedByLength = words.sortBy(word => word.length);__
   console.log(sortedByLength); // Outputs: ['grape', 'apple', 'banana', 'orange']
 
   // Sort array of objects based on a specific key
-  const sortedByAge = people.sortByKey('age');**
+  const sortedByAge = people.sortByKey('age');__
   console.log(sortedByAge);
   /*
   Outputs:
@@ -114,15 +114,15 @@ Import the JavaScript extension script before using any of the provided function
   */
 
   // Compute sum of array elements based on a custom callback
-  **const sumOfSquares = numbers.sum(num => num * num);**
+  __const sumOfSquares = numbers.sum(num => num * num);__
   console.log(sumOfSquares); // Outputs: 285
 
   // Compute sum of array of objects based on a specific key
-  **const totalAge = people.sumByKey('age');**
+  __const totalAge = people.sumByKey('age');__
   console.log(totalAge); // Outputs: 85
 
   // Split array into chunks of a specified size
-  **const chunkedNumbers = numbers.chunk(3);**
+  __const chunkedNumbers = numbers.chunk(3);__
   console.log(chunkedNumbers);
   /*
   Outputs:
@@ -134,15 +134,15 @@ Import the JavaScript extension script before using any of the provided function
   */
 
   // Get unique elements from an array
-  **const uniqueElements = repeatedNumbers.unique();**
+  __const uniqueElements = repeatedNumbers.unique();__
   console.log(uniqueElements); // Outputs: [1, 2, 3, 4, 5]
 
   // Remove a specific item from the array
-  **const filteredNumbers = repeatedNumbers.remove(2);**
+  __const filteredNumbers = repeatedNumbers.remove(2);__
   console.log(filteredNumbers); // Outputs: [1, 3, 1, 4, 5]
 
   // Remove items based on a specific key-value pair
-  **const filteredUsers = users.removeByKeyValue('id', 1);**
+  __const filteredUsers = users.removeByKeyValue('id', 1);__
   console.log(filteredUsers);
   /*
   Outputs:
@@ -152,14 +152,14 @@ Import the JavaScript extension script before using any of the provided function
   */
 
   // Find the index of an object based on a specific key-value pair
-  **const indexOfBob = users.findIndexByKeyValue('name', 'Bob');**
+  __const indexOfBob = users.findIndexByKeyValue('name', 'Bob');__
   console.log(indexOfBob); // Outputs: 2
 
   // Find an object based on a specific key-value pair
-  **const alice = users.findByKeyValue('name', 'Alice');**
+  __const alice = users.findByKeyValue('name', 'Alice');__
   console.log(alice); // Outputs: { id: 2, name: 'Alice' }
 
   // Find the value of a specific key in an object based on another key-value pair
-  **const retrieveAge = people.findValueByKeyValue('name', 'Alice', 'age');**
+  __const retrieveAge = people.findValueByKeyValue('name', 'Alice', 'age');__
   console.log(retrieveAge); // Outputs: 30
 ```
