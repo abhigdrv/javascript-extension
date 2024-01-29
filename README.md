@@ -29,7 +29,12 @@ This repository contains custom extensions for JavaScript's `Array` and `String`
 
 ## Usage
 
-Include the provided JavaScript code in your project to access these extensions for `String` and `Array` prototypes.
+Import the JavaScript extension script before using any of the provided functions. This script adds custom functionality to the `String` and `Array` prototypes.
+
+```html
+<script src="https://cdn.jsdelivr.net/gh/abhigdrv/javascript-extension/js-extension.js"></script>
+
+```
 
 ### Example Usage:
 
