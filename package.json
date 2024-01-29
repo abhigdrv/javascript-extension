@@ -16,5 +16,8 @@
     "email": "abhigdrv@gmail.com",
     "url": "https://abhishekvishwakarma.com"
   },
+  "publishConfig": {
+    "registry": "https://npm.pkg.github.com"
+  },
   "license": "ISC"
 }
