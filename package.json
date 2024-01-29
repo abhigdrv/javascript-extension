@@ -1,0 +1,20 @@
+{
+  "name": "javascript-extension",
+  "version": "1.0.0",
+  "description": "This repository contains custom extensions for JavaScript's `Array` and `String` prototypes, providing additional utility functions.",
+  "main": "js-extension.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/abhigdrv/javascript-extension"
+  },
+  "keywords": ["javascript", "array", "string", "extensions", "js", "helper"],
+  "author": {
+    "name": "Abhishek Vishwakarma",
+    "email": "abhigdrv@gmail.com",
+    "url": "https://abhishekvishwakarma.com"
+  },
+  "license": "ISC"
+}
