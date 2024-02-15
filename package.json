@@ -1,6 +1,6 @@
 {
   "name": "cwa-javascript-extension",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "This repository contains custom extensions for JavaScript's `Array` and `String` prototypes, providing additional utility functions.",
   "main": "js-extension.js",
   "scripts": {
