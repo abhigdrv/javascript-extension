@@ -1,167 +1,196 @@
-# Custom JavaScript Array and String Extensions
+# Custom JavaScript Array, String, and Object Extensions
 
-This repository contains custom extensions for JavaScript's `Array` and `String` prototypes, providing additional utility functions.
+This repository provides a collection of custom extensions for JavaScript's `Array`, `String`, and `Object` prototypes, offering additional utility functions to enhance your development experience.
 
-## Features
+## Table of Contents
 
-### String Prototype Extension
+- [Installation](#installation)
+- [String Prototype Extensions](#string-prototype-extensions)
+- [Array Prototype Extensions](#array-prototype-extensions)
+- [Object Prototype Extensions](#object-prototype-extensions)
+- [Usage Examples](#usage-examples)
+- [Contributing](#contributing)
+- [License](#license)
 
-- `capitalizeFirstLetter`: Capitalizes the first letter of a string.
+## Installation
 
-### Array Prototype Extensions
-
-- `groupBy(callback)`: Groups array elements based on the provided callback.
-- `groupByKey(keyName)`: Groups array of objects by a specific key.
-- `distinct()`: Returns an array with distinct elements.
-- `distinctByKey(key)`: Returns an array of unique objects based on a specific key.
-- `sortBy(callback)`: Sorts the array based on a custom callback function.
-- `sortByKey(key)`: Sorts the array of objects based on a specific key.
-- `sum(callback)`: Computes the sum of an array based on a callback function.
-- `sumByKey(key)`: Computes the sum of an array of objects based on a specific key.
-- `chunk(size)`: Splits the array into chunks of a specified size.
-- `unique()`: Returns an array with unique elements.
-- `uniqueBy(key)`: Returns an array of unique objects based on a specific key.
-- `remove(item)`: Removes a specific item from the array.
-- `removeByKeyValue(key, value)`: Removes items based on a specific key-value pair.
-- `findIndexByKeyValue(key, value)`: Finds the index of an object based on a specific key-value pair.
-- `findKeyValue(key, value)`: Finds an object based on a specific key-value pair.
-- `findValueByKeyValue(key, value, retrieveKey)`: Finds the value of a specific key in an object based on another key-value pair.
-
-## Usage
-
-Import the JavaScript extension script before using any of the provided functions. This script adds custom functionality to the `String` and `Array` prototypes.
+Include the JavaScript extension script in your project:
 
 ```html
 <script src="https://cdn.jsdelivr.net/gh/abhigdrv/javascript-extension/js-extension.js"></script>
 ```
 
-### Example Usage:
+## String Prototype Extensions
+
+- `capitalizeFirstLetter()`: Capitalizes the first letter of a string.
+- `capitalizeWords()`: Capitalizes the first letter of each word in a string.
+- `toCamelCase()`: Converts a string to camel case.
+- `isValidEmail()`: Validates if a string is a valid email format.
+- `reverse()`: Reverses the string.
+- `countOccurrences(substring)`: Counts the occurrences of a substring within the string.
+- `removeWhitespace()`: Removes all whitespace from the string.
+- `toSnakeCase()`: Converts a string to snake case.
+- `truncate(length)`: Truncates the string to a specified length, adding ellipsis if necessary.
+- `stripHtml()`: Removes HTML tags from a string.
+- `replaceAllOccurrences(search, replacement)`: Replaces all occurrences of a substring with a new value.
+- `toKebabCase()`: Converts a string to kebab case.
+- `toTitleCase()`: Converts a string to title case.
+- `pad(length, char)`: Pads the string to a specified length with a character.
+- `startsWithSubstring(substring)`: Checks if the string starts with a specific substring.
+- `endsWithSubstring(substring)`: Checks if the string ends with a specific substring.
+- `removeSubstring(substring)`: Removes all instances of a substring.
+- `toBoolean()`: Converts a string to a boolean.
+- `repeatString(times)`: Repeats the string a specified number of times.
+- `toPascalCase()`: Converts a string to Pascal case.
+- `isPalindrome()`: Checks if the string is a palindrome.
+- `toCharArray()`: Converts the string to an array of characters.
+- `removeCharacter(char)`: Removes all instances of a character.
+- `isDigitOnly()`: Checks if the string contains only digits.
+- `toSentenceCase()`: Converts the string to sentence case.
+- `getFileExtension()`: Gets the file extension from a string representing a file name.
+- `containsAny(substrings)`: Checks if the string contains any of the provided substrings.
+- `trimSpaces()`: Trims whitespace from both ends of the string.
+- `toLowerCaseString()`: Converts the string to lower case.
+- `toUpperCaseString()`: Converts the string to upper case.
+- `toSlug()`: Converts the string to a URL-friendly slug.
+
+## Array Prototype Extensions
+
+- `groupBy(callback)`: Groups array elements based on a callback function.
+- `groupByKey(keyName)`: Groups array elements by a specific key.
+- `distinct()`: Returns an array with distinct elements.
+- `distinctByKey(key)`: Returns an array of unique objects based on a specific key.
+- `sortBy(callback)`: Sorts the array based on a custom callback function.
+- `sortByKey(key)`: Sorts the array of objects based on a specific key.
+- `sum(callback)`: Computes the sum of array elements based on a callback function.
+- `sumByKey(key)`: Computes the sum of array elements based on a specific key.
+- `chunk(size)`: Splits the array into chunks of a specified size.
+- `unique()`: Returns an array with unique elements.
+- `uniqueByKey(key)`: Returns an array of unique objects based on a specific key.
+- `remove(item)`: Removes a specific item from the array.
+- `removeByKeyValue(key, value)`: Removes items based on a specific key-value pair.
+- `findIndexByKeyValue(key, value)`: Finds the index of an object based on a specific key-value pair.
+- `findByKeyValue(key, value)`: Finds an object based on a specific key-value pair.
+- `findValueByKeyValue(key, value, retrieveKey)`: Finds the value of a specific key in an object based on another key-value pair.
+- `filterByKeyValue(key, value)`: Filters array elements based on a specific key-value pair.
+- `deepClone()`: Deeply clones the array.
+- `average(callback)`: Computes the average of array elements based on a callback function.
+- `averageByKey(key)`: Computes the average of array elements based on a specific key.
+- `all(callback)`: Checks if all elements satisfy a callback function.
+- `any(callback)`: Checks if any elements satisfy a callback function.
+- `max(callback)`: Finds the maximum value based on a callback function.
+- `maxByKey(key)`: Finds the maximum value based on a specific key.
+- `min(callback)`: Finds the minimum value based on a callback function.
+- `minByKey(key)`: Finds the minimum value based on a specific key.
+- `compact()`: Removes falsy values from the array.
+- `union(array)`: Returns the union of two arrays.
+- `intersect(array)`: Returns the intersection of two arrays.
+- `difference(array)`: Returns the difference of two arrays.
+- `zip(array)`: Zips two arrays together.
+- `flatten()`: Flattens a nested array.
+- `flattenDepth(depth)`: Flattens a nested array up to a specified depth.
+- `reverseCopy()`: Returns a reversed copy of the array.
+- `transpose()`: Transposes a 2D array.
+- `groupBySize(size)`: Groups array elements by size.
+- `nth(n)`: Returns the nth element of the array.
+- `isEmpty()`: Checks if the array is empty.
+- `isNotEmpty()`: Checks if the array is not empty.
+
+## Object Prototype Extensions
+
+- `merge(source)`: Merges two objects.
+- `deepMerge(source)`: Deeply merges two objects.
+- `clone()`: Shallowly clones the object.
+- `deepClone()`: Deeply clones the object.
+- `isEmpty()`: Checks if the object is empty.
+- `toQueryString()`: Converts the object to a query string.
+- `keys()`: Returns the keys of the object.
+- `values()`: Returns the values of the object.
+- `entries()`: Returns the entries of the object.
+- `hasKey(key)`: Checks if the object has a specific key.
+- `hasValue(value)`: Checks if the object has a specific value.
+- `map(callback)`: Maps the object based on a callback function.
+- `filter(callback)`: Filters the object based on a callback function.
+- `reduce(callback, initialValue)`: Reduces the object based on a callback function and an initial value.
+- `firstKey()`: Returns the first key of the object.
+- `firstValue()`: Returns the first value of the object.
+- `lastKey()`: Returns the last key of the object.
+- `lastValue()`: Returns the last value of the object.
+- `invert()`: Inverts the keys and values of the object.
+- `findKeyByValue(value)`: Finds the key based on a value.
+- `toMap()`: Converts the object to a Map.
+- `toJSONString(space)`: Converts the object to a JSON string with optional spacing.
+- `size()`: Returns the size of the object.
+- `clear()`: Clears the object.
+- `set(key, value)`: Sets a key-value pair in the object.
+- `get(key, defaultValue)`: Gets a value based on a key, with an optional default value.
+- `remove(key)`: Removes a key-value pair from the object.
+
+## Usage Examples
 
 ```javascript
-// Include the JavaScript code here
-// Example usage of the provided functions
+// String Prototype Extensions
+console.log("hello world".capitalizeFirstLetter()); // Hello world
+console.log("hello world".capitalizeWords()); // Hello World
+console.log("hello world".toCamelCase()); // helloWorld
+console.log("example@test.com".isValidEmail()); // true
+console.log("hello".reverse()); // olleh
+console.log("hello world".countOccurrences("o")); // 2
+console.log("hello world".removeWhitespace()); // helloworld
+console.log("hello world".toSnakeCase()); // hello_world
+console.log("hello world".truncate(5)); // hello...
+console.log("<p>hello</p>".stripHtml()); // hello
+console.log("hello world".replaceAllOccurrences("o", "0")); // hell0 w0rld
+console.log("hello world".toKebabCase()); // hello-world
+console.log("hello world".toTitleCase()); // Hello World
+console.log("hello".pad(10, " ")); // "    hello   "
+console.log("hello world".startsWithSubstring("hello")); // true
+console.log("hello world".endsWithSubstring("world")); // true
+console.log("hello world".removeSubstring("world")); // hello 
+console.log("true".toBoolean()); // true
+console.log("hello".repeatString(3)); // hellohellohello
+console.log("hello world".toPascalCase()); // Hello
 
-// Capitalize the first letter of a string
-const capitalizedString = "hello".capitalizeFirstLetter();
-console.log(capitalizedString); // Outputs: Hello
+World
+console.log("madam".isPalindrome()); // true
+console.log("hello".toCharArray()); // ['h', 'e', 'l', 'l', 'o']
+console.log("hello world".removeCharacter("l")); // heo word
+console.log("12345".isDigitOnly()); // true
+console.log("hello world".toSentenceCase()); // Hello world
+console.log("file.txt".getFileExtension()); // txt
+console.log("hello world".containsAny(["hello", "world"])); // true
+console.log("  hello  ".trimSpaces()); // hello
+console.log("hello".toLowerCaseString()); // hello
+console.log("hello".toUpperCaseString()); // HELLO
+console.log("Hello World".toSlug()); // hello-world
 
-// Group array elements based on a custom callback
-const numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9];
-const groupedByOddEven = numbers.groupBy((num) =>
-  num % 2 === 0 ? "even" : "odd"
-);
-console.log(groupedByOddEven);
-/*
-  Outputs:
-  {
-    'odd': [1, 3, 5, 7, 9],
-    'even': [2, 4, 6, 8]
-  }
-  */
+// Array Prototype Extensions
+const arr = [1, 2, 3, 4, 5];
+console.log(arr.groupBy(item => item % 2)); // { 0: [2, 4], 1: [1, 3, 5] }
+console.log(arr.distinct()); // [1, 2, 3, 4, 5]
+console.log(arr.sum()); // 15
+console.log(arr.chunk(2)); // [[1, 2], [3, 4], [5]]
+console.log(arr.remove(3)); // [1, 2, 4, 5]
+console.log(arr.average()); // 3
+console.log(arr.max()); // 5
+console.log(arr.min()); // 1
+console.log(arr.union([4, 5, 6])); // [1, 2, 3, 4, 5, 6]
+console.log(arr.flatten()); // [1, 2, 3, 4, 5]
 
-// Group array of objects by a specific key
-const people = [
-  { name: "Alice", age: 30 },
-  { name: "Bob", age: 25 },
-  { name: "Charlie", age: 30 },
-];
-
-const groupedByAge = people.groupByKey("age");
-console.log(groupedByAge);
-/*
-  Outputs:
-  {
-    '25': [ { name: 'Bob', age: 25 } ],
-    '30': [ { name: 'Alice', age: 30 }, { name: 'Charlie', age: 30 } ]
-  }
-  */
-
-// Get distinct elements from an array
-const repeatedNumbers = [1, 2, 3, 1, 4, 2, 5];
-const distinctNumbers = repeatedNumbers.distinct();
-console.log(distinctNumbers); // Outputs: [1, 2, 3, 4, 5]
-
-// Get unique objects based on a specific key
-const users = [
-  { id: 1, name: "John" },
-  { id: 2, name: "Alice" },
-  { id: 1, name: "Bob" },
-];
-
-const uniqueUsersById = users.uniqueBy("id");
-console.log(uniqueUsersById);
-/*
-  Outputs:
-  [
-    { id: 1, name: 'John' },
-    { id: 2, name: 'Alice' }
-  ]
-  */
-
-// Sort array based on a custom callback
-const words = ["apple", "banana", "grape", "orange"];
-const sortedByLength = words.sortBy((word) => word.length);
-console.log(sortedByLength); // Outputs: ['grape', 'apple', 'banana', 'orange']
-
-// Sort array of objects based on a specific key
-const sortedByAge = people.sortByKey("age");
-console.log(sortedByAge);
-/*
-  Outputs:
-  [
-    { name: 'Bob', age: 25 },
-    { name: 'Alice', age: 30 },
-    { name: 'Charlie', age: 30 }
-  ]
-  */
-
-// Compute sum of array elements based on a custom callback
-const sumOfSquares = numbers.sum((num) => num * num);
-console.log(sumOfSquares); // Outputs: 285
-
-// Compute sum of array of objects based on a specific key
-const totalAge = people.sumByKey("age");
-console.log(totalAge); // Outputs: 85
-
-// Split array into chunks of a specified size
-const chunkedNumbers = numbers.chunk(3);
-console.log(chunkedNumbers);
-/*
-  Outputs:
-  [
-    [1, 2, 3],
-    [4, 5, 6],
-    [7, 8, 9]
-  ]
-  */
-
-// Get unique elements from an array
-const uniqueElements = repeatedNumbers.unique();
-console.log(uniqueElements); // Outputs: [1, 2, 3, 4, 5]
-
-// Remove a specific item from the array
-const filteredNumbers = repeatedNumbers.remove(2);
-console.log(filteredNumbers); // Outputs: [1, 3, 1, 4, 5]
-
-// Remove items based on a specific key-value pair
-const filteredUsers = users.removeByKeyValue("id", 1);
-console.log(filteredUsers);
-/*
-  Outputs:
-  [
-    { id: 2, name: 'Alice' }
-  ]
-  */
-
-// Find the index of an object based on a specific key-value pair
-const indexOfBob = users.findIndexByKeyValue("name", "Bob");
-console.log(indexOfBob); // Outputs: 2
-
-// Find an object based on a specific key-value pair
-const alice = users.findByKeyValue("name", "Alice");
-console.log(alice); // Outputs: { id: 2, name: 'Alice' }
-
-// Find the value of a specific key in an object based on another key-value pair
-const retrieveAge = people.findValueByKeyValue("name", "Alice", "age");
-console.log(retrieveAge); // Outputs: 30
+// Object Prototype Extensions
+const obj = { a: 1, b: 2, c: 3 };
+console.log(obj.keys()); // ['a', 'b', 'c']
+console.log(obj.values()); // [1, 2, 3]
+console.log(obj.entries()); // [['a', 1], ['b', 2], ['c', 3]]
+console.log(obj.map((key, value) => [key, value * 2])); // { a: 2, b: 4, c: 6 }
+console.log(obj.size()); // 3
+console.log(obj.toQueryString()); // a=1&b=2&c=3
 ```
+
+## Contributing
+
+Contributions are welcome! Please read the [contributing guidelines](CONTRIBUTING.md) for more information.
+
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
