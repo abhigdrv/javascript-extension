@@ -17,7 +17,7 @@ This repository provides a collection of custom extensions for JavaScript's `Arr
 Include the JavaScript extension script in your project:
 
 ```html
-<script src="https://cdn.jsdelivr.net/gh/abhigdrv/javascript-extension/js-extension.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/abhigdrv/javascript-extension@1.0.1/js-extension.min.js"></script>
 ```
 
 ## String Prototype Extensions
